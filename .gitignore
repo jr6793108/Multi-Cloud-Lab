@@ -1,0 +1,60 @@
+# Credentials and environment
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+
+# Terraform state and local provider artifacts
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/terraform.tfvars
+**/terraform.tfvars.json
+**/crash.log
+**/crash.*.log
+
+# Database and object-storage runtime data
+**/backups/
+**/localstack-data/
+**/minio-data/
+**/mysql-data/
+*.sql
+
+# Local artifacts
+.DS_Store
+__pycache__/
+
+# Credentials and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+*.pem
+*.key
+
+# Terraform local state and cache
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Database backups
+database/backups/
+*.sql.gz
+
+# Local runtime storage
+storage/localstack-data/
+storage/minio-data/
+
+# Documentation extraction artifacts
+mission01_phase5/
+mission01_phase5_docs.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/

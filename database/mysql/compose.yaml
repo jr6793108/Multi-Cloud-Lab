@@ -1,0 +1,30 @@
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: cloud-lab-mysql
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:3306:3306"
+
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'MYSQL_PWD="$${MYSQL_ROOT_PASSWORD}" mysqladmin ping -h 127.0.0.1 -u root --silent'
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+
+volumes:
+  mysql_data:

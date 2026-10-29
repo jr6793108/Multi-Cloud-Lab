@@ -1,0 +1,15 @@
+services:
+  localstack:
+    image: localstack/localstack:3.8.1
+    container_name: cloud-lab-localstack
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:4566:4566"
+
+    environment:
+      - SERVICES=s3
+      - DEBUG=0
+
+    volumes:
+      - ../localstack-data:/var/lib/localstack
