@@ -1,0 +1,30 @@
+# Credentials
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+
+# Terraform
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+**/*.tfvars.json
+
+# Database backups
+**/backups/
+
+# Local runtime data
+**/localstack-data/
+**/minio-data/
+
+# Generated and legacy files
+**/mission01_phase5/
+**/mission01_phase5_docs.zip
+**/storage/compose.yaml
+**/storage/test-files/mission01-downloaded.txt
+
+# Editor files
+.DS_Store
+Thumbs.db
+.vscode/
