@@ -28,3 +28,7 @@
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Kubernetes runtime-generated exports
+**/evidence/deployment-before-update.yaml
+**/evidence/deployment-working-v1.yaml

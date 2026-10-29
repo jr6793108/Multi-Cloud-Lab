@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mission02-web
+  labels:
+    app: mission02-web
+spec:
+  type: ClusterIP
+  selector:
+    app: mission02-web
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080

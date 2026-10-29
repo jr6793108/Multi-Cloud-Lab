@@ -1,0 +1,2 @@
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+mission02-web   2/2     2            2           63m
