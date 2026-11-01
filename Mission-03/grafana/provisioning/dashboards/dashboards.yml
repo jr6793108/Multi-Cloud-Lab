@@ -1,0 +1,12 @@
+apiVersion: 1
+
+providers:
+  - name: Mission-03
+    orgId: 1
+    folder: Mission-03
+    type: file
+    disableDeletion: false
+    editable: false
+    updateIntervalSeconds: 30
+    options:
+      path: /var/lib/grafana/mission03-dashboards

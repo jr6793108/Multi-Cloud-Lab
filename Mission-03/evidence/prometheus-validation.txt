@@ -1,0 +1,15 @@
+Mission-03 Prometheus Validation
+Sun Nov  1 07:26:39 PM UTC 2026
+
+docker_container.mission03_app
+docker_container.prometheus
+docker_image.mission03_app
+docker_image.prometheus
+docker_network.mission03
+docker_volume.prometheus_data
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                      NAMES
+b1e6e681cc72   63805ebb8d2b   "/bin/prometheus --c…"   8 minutes ago    Up 8 minutes    127.0.0.1:9090->9090/tcp   mission03-prometheus
+5f690c15ee39   58fb99af0b22   "python app.py"          14 minutes ago   Up 14 minutes   127.0.0.1:8081->8080/tcp   mission03-web
+
+Prometheus Server is Ready.

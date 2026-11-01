@@ -1,0 +1,25 @@
+MISSION-03 MONITORING VALIDATION
+==============================
+Sun Nov  1 09:02:45 PM UTC 2026
+
+DOCKER CONTAINERS
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                      NAMES
+bb43267a7051   a1701c218024   "/run.sh"                6 minutes ago   Up 6 minutes   127.0.0.1:3000->3000/tcp   mission03-grafana
+cdf0aa527e04   d00a542e409e   "/bin/node_exporter …"   2 hours ago     Up 2 hours     127.0.0.1:9100->9100/tcp   mission03-node-exporter
+b1e6e681cc72   63805ebb8d2b   "/bin/prometheus --c…"   2 hours ago     Up 2 hours     127.0.0.1:9090->9090/tcp   mission03-prometheus
+5f690c15ee39   58fb99af0b22   "python app.py"          2 hours ago     Up 2 hours     127.0.0.1:8081->8080/tcp   mission03-web
+
+PROMETHEUS TARGETS
+mission03-application up
+mission03-node-exporter up
+prometheus up
+
+GRAFANA HEALTH
+{
+  "database": "ok",
+  "version": "12.1.1",
+  "commit": "df5de8219b41d1e639e003bf5f3a85913761d167"
+}
+
+APPLICATION REQUEST COUNTER
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1793566965.352,"222"]}]}}

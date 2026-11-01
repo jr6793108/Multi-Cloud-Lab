@@ -1,0 +1,14 @@
+Mission-03 Terraform Network Validation
+Sun Nov  1 07:09:02 PM UTC 2026
+
+Terraform v1.17.1
+on linux_amd64
++ provider registry.terraform.io/kreuzwerker/docker v3.9.0
+
+
+docker_network.mission03
+
+mission03_network_id = "b09f214a9a354f5ac683ace62018d704268901ab9e3807c0868ee2349fb5adbe"
+mission03_network_name = "mission03-network"
+
+Name=mission03-network Driver=bridge Scope=local
